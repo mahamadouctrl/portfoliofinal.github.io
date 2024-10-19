@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de Demande d'Informations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-control {
+            margin-bottom: 15px;
+        }
+        .form-control label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-control input,
+        .form-control textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .form-control textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        .form-control input[type="submit"] {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+        .form-control input[type="submit"]:hover {
+            background-color: #2980b9;
+        }
+        .error {
+            color: red;
+            font-size: 14px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Formulaire de Demande d'Informations</h1>
+
+    <form id="infoForm">
+        <div class="form-control">
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="name" placeholder="Votre nom">
+            <div class="error" id="nameError">Le nom est requis.</div>
+        </div>
+
+        <div class="form-control">
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" placeholder="Votre email">
+            <div class="error" id="emailError">Veuillez entrer un email valide.</div>
+        </div>
+
+        <div class="form-control">
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" placeholder="Votre message"></textarea>
+            <div class="error" id="messageError">Le message est requis.</div>
+        </div>
+
+        <div class="form-control">
+            <input type="submit" value="Envoyer la demande">
+        </div>
+    </form>
+
+    <script>
+        document.getElementById('infoForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Empêche l'envoi du formulaire
+
+            // Récupérer les valeurs des champs
+            let name = document.getElementById('name').value;
+            let email = document.getElementById('email').value;
+            let message = document.getElementById('message').value;
+
+            // Réinitialiser les messages d'erreur
+            document.getElementById('nameError').style.display = 'none';
+            document.getElementById('emailError').style.display = 'none';
+            document.getElementById('messageError').style.display = 'none';
+
+            // Valider les champs
+            let isValid = true;
+
+            if (name.trim() === '') {
+                document.getElementById('nameError').style.display = 'block';
+                isValid = false;
+            }
+            if (email.trim() === '' || !validateEmail(email)) {
+                document.getElementById('emailError').style.display = 'block';
+                isValid = false;
+            }
+            if (message.trim() === '') {
+                document.getElementById('messageError').style.display = 'block';
+                isValid = false;
+            }
+
+            // Si tous les champs sont valides, soumettre le formulaire
+            if (isValid) {
+                alert('Formulaire envoyé avec succès !');
+                // Ici, vous pouvez ajouter du code pour traiter les données (envoi à un serveur par exemple)
+            }
+        });
+
+        // Fonction pour valider l'adresse email
+        function validateEmail(email) {
+            const re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            return re.test(String(email).toLowerCase());
+        }
+    </script>
+
+</body>
+</html>

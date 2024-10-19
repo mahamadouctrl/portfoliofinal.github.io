@@ -1,0 +1,181 @@
+/* Style général */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* En-tête et menu */
+header {
+    background-color: #333;
+    padding: 10px 0;
+    color: white;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Effet de survol sur les liens du menu */
+nav ul li a:hover {
+    color: #ff6347; /* Change la couleur au survol */
+    transform: scale(1.1); /* Agrandit légèrement l'élément au survol */
+}
+
+h1, h2 {
+    text-align: center;
+    color: #333;
+}
+
+section {
+    padding: 20px;
+}
+
+/* Formulaire de contact */
+#contactForm {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#contactForm input, #contactForm textarea {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Effet de survol sur les champs de formulaire */
+#contactForm input:hover, #contactForm textarea:hover {
+    border-color: #333; /* Change la bordure au survol */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Ajoute une ombre légère au survol */
+}
+
+/* Bouton d'envoi */
+#contactForm button {
+    padding: 10px;
+    border: none;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Effet de survol sur le bouton */
+#contactForm button:hover {
+    background-color: #ff6347; /* Change la couleur du bouton au survol */
+    transform: scale(1.05); /* Agrandit légèrement le bouton au survol */
+}
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .competence-section {
+            margin: 20px 0;
+            padding: 15px;
+            border-radius: 8px;
+            color: #fff;
+            transition: transform 0.3s, background-color 0.3s; /* Ajout de l'effet de transition */
+        }
+        .competence-title {
+            font-size: 22px;
+            font-weight: bold;
+        }
+        .competence-description {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #f9f9f9;
+        }
+        /* Différentes couleurs pour chaque section */
+        .competence1 {
+            background-color: #8e44ad; /* Violet */
+        }
+        .competence2 {
+            background-color: #16a085; /* Vert Sarcelle */
+        }
+        .competence3 {
+            background-color: #c0392b; /* Rouge foncé */
+        }
+        .competence4 {
+            background-color: #2980b9; /* Bleu vif */
+        }
+        .competence5 {
+            background-color: #f39c12; /* Orange */
+        }
+        .competence6 {
+            background-color: #27ae60; /* Vert */
+        }
+        .competence7 {
+            background-color: #2c3e50; /* Gris foncé */
+        }
+
+        /* Effet de survol (hover) : changement de couleur et légère élévation */
+        .competence-section:hover {
+            transform: scale(1.05); /* Agrandit légèrement la section */
+            background-color: #34495e; /* Change la couleur de fond lors du survol */
+        }
+    </style>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9;
+        padding: 20px;
+    }
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    li {
+        margin: 10px 0;
+        padding: 15px;
+        color: #fff;
+        border-radius: 8px;
+        font-size: 18px;
+        transition: transform 0.3s, background-color 0.3s; /* Ajout de l'effet de transition */
+    }
+    /* Couleurs des projets */
+    .projet1 {
+        background-color: #3498db; /* Bleu */
+    }
+    .projet2 {
+        background-color: #e74c3c; /* Rouge */
+    }
+    .projet3 {
+        background-color: #2ecc71; /* Vert */
+    }
+    .projet4 {
+        background-color: #f1c40f; /* Jaune */
+    }
+
+    /* Effet de survol (hover) : changement de couleur et légère élévation */
+    li:hover {
+        transform: scale(1.05); /* Agrandit légèrement l'élément */
+        background-color: #34495e; /* Change la couleur de fond lors du survol */
+    }
+</style>
